@@ -1,0 +1,55 @@
+<div class="module checklist" ng-controller="checklistController">
+    <!-- write your module html here -->
+    <div class="checklistContainer divform">
+      <h3 translate>title</h3>
+    </div>
+    <div class="checklistContainer divform">
+
+      <form novalidate class="checklistSoon">
+
+        <div class="form-group">
+          <label>Inserte Cantidad
+          <input  ng-model="producto.cantidad" size="5">  </input>
+          </label>
+        </div>
+        <div class="form-group">
+          <label>Inserte Artículo
+          <input ng-model="producto.articulo" size="20">  </input>
+          </label>
+        </div>
+        <br>
+        <div class="form-group">
+          <koa-button ng-click="addItem()" class="boton">Añadir</koa-button>
+        </div>
+      </form>
+      <div class="checklistContainer" ng-if="err!=''">
+        <p ng-model="err" class="error">{{err}}</p>
+      </div>
+      <div class="checklistContainer">
+        <ul class="list">
+          <li ng-repeat="item in arrayItems">
+             <input type="checkbox" ng-model="item.hecho">
+             <span class="hecho-{{item.hecho}}">{{item.cantidad}}  {{item.articulo}}</span>
+             <!-- <koa-icon-button id='number' icon='close' alt='no se puede visualizar'></koa-icon-button>
+             <span class="deleteForm" ng-click="removeItem($index)"><koa-icon-button id='number' icon='close' alt='no se puede visualizar'></koa-icon-button></span> -->
+             <span class="deleteForm" ng-click="removeItem($index)">&times;</span>
+          </li>
+        </ul>
+      </div>
+      <!-- <ul >
+        <li>
+           <koa-icon-button id='number' icon='close' alt='no se puede visualizar'></koa-icon-button>
+        </li>
+        <li>
+           <koa-icon-button id='number' icon='close' alt='no se puede visualizar'></koa-icon-button>
+        </li>
+        <li>
+           <koa-icon-button id='number' icon='close' alt='no se puede visualizar'></koa-icon-button>
+        </li>
+      </ul> -->
+
+    </div>
+
+
+    <!-- end module html -->
+</div>

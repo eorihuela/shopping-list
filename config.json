@@ -1,0 +1,52 @@
+{
+  "name": "Lista de la Compra",
+  "identifier": "checklist",
+  "description": {
+    "es-ES": "Lista de la compra con opciones de añadir, borrar y tachar",
+    "en-US": "Shopping list with options to add, delete and delete"
+  },
+  "documentation": {
+    "es-ES": "modules/checklist/docs/es_ES.md",
+    "en-US": "modules/checklist/docs/en_US.md"
+  },
+  "descriptionShort": {
+    "es-ES": "",
+    "en-US": ""
+  },
+  "icon": "room",
+  "type": "A",
+  "version": "0.0.1",
+  "author": "King of App",
+  "category": ["others"],
+  "price": 0,
+  "subscription": false,
+  "canContain": false,
+  "platforms": [
+    "android",
+    "ios",
+    "windows"
+  ],
+  "view": "modules/checklist/index.html",
+  "files": [
+    "modules/checklist/controller.js", "modules/checklist/style.html"
+  ],
+  "scope": {"demoKey": "demo text"},
+  "libs": [{
+    
+  }],
+  "config": [],
+  "showOn": {
+    "menu": true,
+    "market": true,
+    "dragDrop": true
+  },
+  "images": {
+    "list": "modules/checklist/images/list.png",
+    "screenshots": [
+      "modules/checklist/images/screenshot01.png"
+    ],
+    "popover": "modules/checklist/images/popover.png",
+    "banner": "modules/checklist/images/banner.png",
+    "logo": "modules/checklist/images/logo.png"
+  }
+}
